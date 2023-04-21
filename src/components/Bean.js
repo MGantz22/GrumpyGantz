@@ -10,8 +10,8 @@ function Bean(props) {
         <span>Origin | {props.origin} <br/></span>
         <span>Roast | {props.roast} <br/></span>
         <span>Price per lb | ${props.price} <br/></span>
-        <span>Stock | {props.stock} <br/></span>
-        <span>Sold | {props.sold} <br/></span>
+        <span>On Hand | {props.stock} lbs <br/></span>
+        <span>lbs Sold | {props.sold} <br/></span>
         </ul>
         <hr />
       </div>
