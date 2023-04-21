@@ -1,6 +1,7 @@
 import React from "react";
 import Bean from "./Bean";
 import PropTypes from "prop-types";
+import { Container } from "react-bootstrap";
 
 
 
@@ -8,11 +9,11 @@ import PropTypes from "prop-types";
 function BeanList(props){
   return (
     
-      
+      <Container>
     <React.Fragment>
       <hr/>
         {props.beanList.map((bean) => 
-          <Bean 
+          <Bean
             whenBeanClicked = {props.onBeanSelection}
             name={bean.name}
             origin={bean.origin}
@@ -23,7 +24,9 @@ function BeanList(props){
             id={bean.id}
             key={bean.id} />
         )}
+
     </React.Fragment>
+    </Container>
     
     
   );
