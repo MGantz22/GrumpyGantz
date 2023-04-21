@@ -1,0 +1,33 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+function Bean(props) {
+  return (
+    <React.Fragment>
+      <div onclick= {() => props.whenBeanClicked(props.id)}>
+        <ul>
+        <h3>{props.name}</h3>
+        <span>Origin | {props.orgin} <br/></span>
+        <span>Roast | {props.roast} <br/></span>
+        <span>Price | {props.price} <br/></span>
+        <span>Stock | {props.stock} <br/></span>
+        <span>Sold | {props.sold} <br/></span>
+        </ul>
+        <hr />
+      </div>
+    </React.Fragment>
+  );
+}
+
+Bean.propTypes = {
+  name: PropTypes.string.isRequired,
+  origin: PropTypes.string.isRequired,
+  roast: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  stock: PropTypes.string.isRequired,
+  sold: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  whenBeanClicked: PropTypes.func
+};
+
+export default Bean;
