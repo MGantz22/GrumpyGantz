@@ -14,15 +14,44 @@ class BeanControl extends React.Component {
       formVisibleOnPage: false,
       mainBeanList: [
         {
-        name: "Programmers Delight",
-        origin: "Midwest-U.S",
-        price: 22,
-        roast: "Dark",
-        stock: 130,
-        sold: 0,
-        id: v4()
+          name: "Programmers Delight",
+          origin: "Midwest-U.S",
+          price: 22,
+          roast: "Dark",
+          stock: 130,
+          sold: 0,
+          id: v4()
+        },
 
+        {
+          name: "Rough Stuff",
+          origin: "Southern France",
+          price: 28,
+          roast: "Medium",
+          stock: 25,
+          sold: 0,
+          id: v4()
+        },
+        {
+          name: "Goji-Berry",
+          origin: "Canada",
+          price: 21,
+          roast: "light",
+          stock: 54,
+          sold: 0,
+          id: v4()
+        },
+        {
+          name: "Darryl-Dude",
+          origin: "Canada",
+          price: 17,
+          roast: "Medium",
+          stock: 120,
+          sold: 0,
+          id: v4()
         }
+    
+  
 
 
 
@@ -126,7 +155,7 @@ class BeanControl extends React.Component {
 
     } else {
       currentlyVisibleState = <BeanList beanList={this.state.mainBeanList} onBeanSelection={this.handleChangingSelectedBean} />;
-      buttonText = "Add Bean Sack"; 
+      buttonText = "Add Beans to Inventory"; 
     }
     return (
       <React.Fragment>
