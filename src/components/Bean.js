@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 function Bean(props) {
   return (
     <React.Fragment>
-      <div onclick= {() => props.whenBeanClicked(props.id)}>
+      <div onClick= {() => props.whenBeanClicked(props.id)}>
         <ul>
         <h3>{props.name}</h3>
-        <span>Origin | {props.orgin} <br/></span>
+        <span>Origin | {props.origin} <br/></span>
         <span>Roast | {props.roast} <br/></span>
-        <span>Price | {props.price} <br/></span>
+        <span>Price per lb | ${props.price} <br/></span>
         <span>Stock | {props.stock} <br/></span>
         <span>Sold | {props.sold} <br/></span>
         </ul>
@@ -22,10 +22,10 @@ function Bean(props) {
 Bean.propTypes = {
   name: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   roast: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  stock: PropTypes.string.isRequired,
-  sold: PropTypes.string.isRequired,
+  stock: PropTypes.number.isRequired,
+  sold: PropTypes.number.isRequired,
   id: PropTypes.string,
   whenBeanClicked: PropTypes.func
 };
