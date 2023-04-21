@@ -3,6 +3,7 @@ import NewBeanForm from './NewBeanForm';
 import BeanList from './BeanList';
 import BeanDetail from './BeanDetail';
 import EditBeanForm from './EditBeanForm';
+import { v4 } from 'uuid';
 
 
 class BeanControl extends React.Component {
@@ -11,7 +12,29 @@ class BeanControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      mainBeanList: [],
+      mainBeanList: [
+        {
+        name: "Programmers Delight",
+        origin: "Midwest-U.S",
+        price: 22,
+        roast: "Dark",
+        stock: 130,
+        sold: 0,
+        id: v4()
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+      ],
       selectedBean: null,
       editing: false
     };
@@ -87,6 +110,7 @@ class BeanControl extends React.Component {
     if( this.state.editing) {
       currentlyVisibleState = <EditBeanForm bean = {this.state.selectedBean} onEditBean = {this.handleEditingBeanInList} />
       buttonText = "Return to Bean List";
+
     } else if (this.state.selectedBean != null) {
       currentlyVisibleState = 
       <BeanDetail 
@@ -95,12 +119,14 @@ class BeanControl extends React.Component {
       onClickingDelete = {this.handleDeleteingBean} 
       onClickingEdit = {this.handleEditClick} />
       buttonText = "Return to Bean List";
+
     }else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewBeanForm  onNewBeanCreation= {this.handleAddingNewBeanToList} />;
       buttonText = "Return to Bean List"; 
+
     } else {
-      currentlyVisibleState = <BeanList beanList={this.state.mainBeanList} onNewBeanSelection={this.handleChangingSelectedBean} />;
-      buttonText = "Add New Bean Sack"; 
+      currentlyVisibleState = <BeanList beanList={this.state.mainBeanList} onBeanSelection={this.handleChangingSelectedBean} />;
+      buttonText = "Add Bean Sack"; 
     }
     return (
       <React.Fragment>
