@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from './Header';
+import Logoimg from './Logo';
 import BeanControl from './BeanControl';
+import Header from './Header';
 
 
 import Container from 'react-bootstrap/Container';
@@ -13,9 +14,10 @@ function App() {
   return(
     <React.Fragment>
       <Container>
-      <Header />
-      <Row>
+        <Header />
+        <Row>
         <Col><BeanControl /></Col>
+        <Col><Logoimg /></Col>
         </Row>
       </Container>
     </React.Fragment>
