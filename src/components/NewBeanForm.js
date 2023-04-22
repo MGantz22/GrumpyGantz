@@ -10,7 +10,7 @@ function NewBeanForm(props) {
       <Container>
       <ReusableForm 
         formSubmissionHandler={handleNewBeanFormSubmission}
-        buttonText="Add bean Sack"  />
+        buttonText="Add Beans"  />
       </Container>
     </React.Fragment>
   );
