@@ -16,8 +16,8 @@ function App() {
       <Container>
         <Header />
         <Row>
-        <Col><BeanControl /></Col>
-        <Col><Logoimg /></Col>
+          <Col><BeanControl /></Col>
+          <Col><Logoimg /></Col>
         </Row>
       </Container>
     </React.Fragment>
